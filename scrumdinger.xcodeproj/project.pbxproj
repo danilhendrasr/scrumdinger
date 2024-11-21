@@ -75,10 +75,10 @@
 		DDD904242CED74300098B5DD = {
 			isa = PBXGroup;
 			children = (
-				DDD9042F2CED74300098B5DD /* scrumdinger */,
 				DDD904402CED74330098B5DD /* scrumdingerTests */,
 				DDD9044A2CED74330098B5DD /* scrumdingerUITests */,
 				DDD9042E2CED74300098B5DD /* Products */,
+				DDD9042F2CED74300098B5DD /* scrumdinger */,
 			);
 			sourceTree = "<group>";
 		};
