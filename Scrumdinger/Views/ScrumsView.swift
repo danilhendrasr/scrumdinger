@@ -16,11 +16,16 @@ struct ScrumsView: View {
 
     var body: some View {
         NavigationStack {
-            List($scrums) { $scrum in
-                NavigationLink(destination: DetailView(dailyScrum: $scrum)) {
-                    CardView(scrum: scrum)
+            List {
+                ForEach($scrums) { $scrum in
+                    NavigationLink(destination: DetailView(dailyScrum: $scrum)) {
+                        HStack {
+                            CardView(scrum: scrum)
+                        }
+                    }
+                    .listRowBackground(scrum.theme.mainColor)
                 }
-                .listRowBackground(scrum.theme.mainColor)
+                .onDelete { scrums.remove(atOffsets: $0) }
             }
             .navigationTitle("Daily Scrums")
             .toolbar {
