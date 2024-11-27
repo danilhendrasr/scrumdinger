@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DD6956832CF69CF600672AFB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6956822CF69CF500672AFB /* WidgetKit.framework */; };
+		DD6956852CF69CF600672AFB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6956842CF69CF600672AFB /* SwiftUI.framework */; };
+		DD6956962CF69CF900672AFB /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DD6956802CF69CF500672AFB /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDC536552CF6A19A00D933A4 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536462CF6A19A00D933A4 /* DailyScrum.swift */; };
+		DDC536562CF6A19A00D933A4 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536482CF6A19A00D933A4 /* History.swift */; };
+		DDC536572CF6A19A00D933A4 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536472CF6A19A00D933A4 /* ErrorWrapper.swift */; };
+		DDC536582CF6A19A00D933A4 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC5364A2CF6A19A00D933A4 /* ScrumTimer.swift */; };
+		DDC536592CF6A19A00D933A4 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536452CF6A19A00D933A4 /* AVPlayer+Ding.swift */; };
+		DDC5365B2CF6A19A00D933A4 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536492CF6A19A00D933A4 /* ScrumStore.swift */; };
+		DDC5365C2CF6A19A00D933A4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC5364C2CF6A19A00D933A4 /* Theme.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DD69562A2CF69B4600672AFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +34,55 @@
 			remoteGlobalIDString = DD6956182CF69B4300672AFB;
 			remoteInfo = Scrumdinger;
 		};
+		DD6956942CF69CF900672AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD6956112CF69B4300672AFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD69567F2CF69CF500672AFB;
+			remoteInfo = WidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD69569B2CF69CF900672AFB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DD6956962CF69CF900672AFB /* WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DD6956192CF69B4300672AFB /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6956292CF69B4600672AFB /* ScrumdingerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumdingerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6956332CF69B4600672AFB /* ScrumdingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumdingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6956802CF69CF500672AFB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6956822CF69CF500672AFB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DD6956842CF69CF600672AFB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DD69569C2CF69D5600672AFB /* WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetsExtension.entitlements; sourceTree = "<group>"; };
+		DDC536452CF6A19A00D933A4 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
+		DDC536462CF6A19A00D933A4 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
+		DDC536472CF6A19A00D933A4 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		DDC536482CF6A19A00D933A4 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		DDC536492CF6A19A00D933A4 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		DDC5364A2CF6A19A00D933A4 /* ScrumTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
+		DDC5364C2CF6A19A00D933A4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DD6956972CF69CF900672AFB /* Exceptions for "Widgets" folder in "WidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DD69567F2CF69CF500672AFB /* WidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DD69561B2CF69B4300672AFB /* Scrumdinger */ = {
@@ -43,6 +98,14 @@
 		DD6956362CF69B4600672AFB /* ScrumdingerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ScrumdingerUITests;
+			sourceTree = "<group>";
+		};
+		DD6956862CF69CF600672AFB /* Widgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DD6956972CF69CF900672AFB /* Exceptions for "Widgets" folder in "WidgetsExtension" target */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +132,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD69567D2CF69CF500672AFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD6956852CF69CF600672AFB /* SwiftUI.framework in Frameworks */,
+				DD6956832CF69CF600672AFB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DD6956102CF69B4300672AFB = {
 			isa = PBXGroup;
 			children = (
+				DDC536442CF6A17100D933A4 /* Shared */,
+				DD69569C2CF69D5600672AFB /* WidgetsExtension.entitlements */,
 				DD69561B2CF69B4300672AFB /* Scrumdinger */,
 				DD69562C2CF69B4600672AFB /* ScrumdingerTests */,
 				DD6956362CF69B4600672AFB /* ScrumdingerUITests */,
+				DD6956862CF69CF600672AFB /* Widgets */,
+				DD6956812CF69CF500672AFB /* Frameworks */,
 				DD69561A2CF69B4300672AFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +164,32 @@
 				DD6956192CF69B4300672AFB /* Scrumdinger.app */,
 				DD6956292CF69B4600672AFB /* ScrumdingerTests.xctest */,
 				DD6956332CF69B4600672AFB /* ScrumdingerUITests.xctest */,
+				DD6956802CF69CF500672AFB /* WidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DD6956812CF69CF500672AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6956822CF69CF500672AFB /* WidgetKit.framework */,
+				DD6956842CF69CF600672AFB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDC536442CF6A17100D933A4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DDC536452CF6A19A00D933A4 /* AVPlayer+Ding.swift */,
+				DDC536462CF6A19A00D933A4 /* DailyScrum.swift */,
+				DDC536472CF6A19A00D933A4 /* ErrorWrapper.swift */,
+				DDC536482CF6A19A00D933A4 /* History.swift */,
+				DDC536492CF6A19A00D933A4 /* ScrumStore.swift */,
+				DDC5364A2CF6A19A00D933A4 /* ScrumTimer.swift */,
+				DDC5364C2CF6A19A00D933A4 /* Theme.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +202,12 @@
 				DD6956152CF69B4300672AFB /* Sources */,
 				DD6956162CF69B4300672AFB /* Frameworks */,
 				DD6956172CF69B4300672AFB /* Resources */,
+				DD69569B2CF69CF900672AFB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD6956952CF69CF900672AFB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DD69561B2CF69B4300672AFB /* Scrumdinger */,
@@ -163,6 +265,28 @@
 			productReference = DD6956332CF69B4600672AFB /* ScrumdingerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DD69567F2CF69CF500672AFB /* WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD6956982CF69CF900672AFB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */;
+			buildPhases = (
+				DD69567C2CF69CF500672AFB /* Sources */,
+				DD69567D2CF69CF500672AFB /* Frameworks */,
+				DD69567E2CF69CF500672AFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DD6956862CF69CF600672AFB /* Widgets */,
+			);
+			name = WidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = WidgetsExtension;
+			productReference = DD6956802CF69CF500672AFB /* WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +308,9 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = DD6956182CF69B4300672AFB;
 					};
+					DD69567F2CF69CF500672AFB = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
 			buildConfigurationList = DD6956142CF69B4300672AFB /* Build configuration list for PBXProject "Scrumdinger" */;
@@ -203,6 +330,7 @@
 				DD6956182CF69B4300672AFB /* Scrumdinger */,
 				DD6956282CF69B4600672AFB /* ScrumdingerTests */,
 				DD6956322CF69B4600672AFB /* ScrumdingerUITests */,
+				DD69567F2CF69CF500672AFB /* WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +351,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DD6956312CF69B4600672AFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD69567E2CF69CF500672AFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +388,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD69567C2CF69CF500672AFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC536552CF6A19A00D933A4 /* DailyScrum.swift in Sources */,
+				DDC536562CF6A19A00D933A4 /* History.swift in Sources */,
+				DDC536572CF6A19A00D933A4 /* ErrorWrapper.swift in Sources */,
+				DDC536582CF6A19A00D933A4 /* ScrumTimer.swift in Sources */,
+				DDC536592CF6A19A00D933A4 /* AVPlayer+Ding.swift in Sources */,
+				DDC5365B2CF6A19A00D933A4 /* ScrumStore.swift in Sources */,
+				DDC5365C2CF6A19A00D933A4 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +414,11 @@
 			isa = PBXTargetDependency;
 			target = DD6956182CF69B4300672AFB /* Scrumdinger */;
 			targetProxy = DD6956342CF69B4600672AFB /* PBXContainerItemProxy */;
+		};
+		DD6956952CF69CF900672AFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD69567F2CF69CF500672AFB /* WidgetsExtension */;
+			targetProxy = DD6956942CF69CF900672AFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -532,6 +686,70 @@
 			};
 			name = Release;
 		};
+		DD6956992CF69CF900672AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q4QSF8Y8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danilhendrasr.Scrumdinger.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DD69569A2CF69CF900672AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q4QSF8Y8Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danilhendrasr.Scrumdinger.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,6 +785,15 @@
 			buildConfigurations = (
 				DD6956442CF69B4600672AFB /* Debug */,
 				DD6956452CF69B4600672AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD6956982CF69CF900672AFB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD6956992CF69CF900672AFB /* Debug */,
+				DD69569A2CF69CF900672AFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
