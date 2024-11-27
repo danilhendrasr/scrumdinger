@@ -82,11 +82,21 @@
 			);
 			target = DD69567F2CF69CF500672AFB /* WidgetsExtension */;
 		};
+		DDC5365E2CF6FAC300D933A4 /* Exceptions for "Scrumdinger" folder in "Scrumdinger" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DD6956182CF69B4300672AFB /* Scrumdinger */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DD69561B2CF69B4300672AFB /* Scrumdinger */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DDC5365E2CF6FAC300D933A4 /* Exceptions for "Scrumdinger" folder in "Scrumdinger" target */,
+			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
 		};
@@ -554,8 +564,11 @@
 				DEVELOPMENT_TEAM = 2Q4QSF8Y8Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scrumdinger/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Scrumdinger;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -590,8 +603,11 @@
 				DEVELOPMENT_TEAM = 2Q4QSF8Y8Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scrumdinger/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Scrumdinger;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
