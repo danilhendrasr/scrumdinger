@@ -5,6 +5,7 @@
 //  Created by Danil Hendra Suryawan on 20/11/24.
 //
 
+import ActivityKit
 import AVFoundation
 import SwiftUI
 
@@ -14,6 +15,7 @@ struct MeetingView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var isRecording = false
     @State private var isFinished = false
+    @State private var activity: Activity<MeetingActivityAttributes>? = nil
     @Environment(\.presentationMode) private var presentationMode
 
     private var player: AVPlayer { AVPlayer.sharedDingPlayer }
@@ -40,6 +42,7 @@ struct MeetingView: View {
         .foregroundColor(scrum.theme.accentColor)
         .onAppear {
             startScrum()
+            startLiveActivity()
         }
         .onDisappear {
             endScrum()
@@ -49,10 +52,13 @@ struct MeetingView: View {
                 endScrum()
                 isFinished = true
             }
+            
+            updateLiveActivity()
         }
         .alert("Meeting has finished", isPresented: $isFinished) {
             Button("OK") {
                 presentationMode.wrappedValue.dismiss()
+                stopLiveActivity()
             }
         } message: {
             Text(
@@ -62,9 +68,8 @@ struct MeetingView: View {
     }
 
     private func startScrum() {
-        scrumTimer.reset(
-            lengthInMinutes: scrum.lengthInMinutes,
-            attendees: scrum.attendees)
+        scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes,
+                         attendees: scrum.attendees)
         scrumTimer.speakerChangedAction = {
             player.seek(to: .zero)
             player.play()
@@ -78,11 +83,64 @@ struct MeetingView: View {
     private func endScrum() {
         scrumTimer.stopScrum()
         speechRecognizer.stopTranscribing()
-        let newHistory = History(
-            attendees: scrum.attendees,
-            transcript: speechRecognizer.transcript)
+        let newHistory = History(attendees: scrum.attendees,
+                                 transcript: speechRecognizer.transcript)
         scrum.history.insert(newHistory, at: 0)
         isRecording = false
+    }
+    
+    private func startLiveActivity() {
+        let attributes = MeetingActivityAttributes(name: "Meeting")
+        let state = MeetingActivityAttributes.ContentState(
+            secondsElapsed: scrumTimer.secondsElapsed,
+            secondsRemaining: scrumTimer.secondsRemaining,
+            speaker: scrumTimer.speakers.first(where: { !$0.isCompleted })?.name ?? "No one"
+        )
+        
+        Task {
+            do {
+                activity = try await Activity<MeetingActivityAttributes>.request(
+                    attributes: attributes,
+                    content: .init(state: state, staleDate: nil),
+                    pushType: nil
+                )
+            } catch {
+                print("Failed to start Live Activity: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func updateLiveActivity() {
+        let state = MeetingActivityAttributes.ContentState(
+            secondsElapsed: scrumTimer.secondsElapsed,
+            secondsRemaining: scrumTimer.secondsRemaining,
+            speaker: scrumTimer.speakers.first(where: { !$0.isCompleted })?.name ?? "No one"
+        )
+        
+        Task {
+            await activity?.update(
+                ActivityContent<MeetingActivityAttributes.ContentState>(
+                    state: state,
+                    staleDate: Date.now + 1,
+                    relevanceScore: 50
+                )
+            )
+        }
+    }
+    
+    private func stopLiveActivity() {
+        let state = MeetingActivityAttributes.ContentState(
+            secondsElapsed: 0,
+            secondsRemaining: 0,
+            speaker: "No one"
+        )
+        
+        Task {
+            await activity?.end(
+                ActivityContent(state: state, staleDate: nil),
+                dismissalPolicy: .immediate
+            )
+        }
     }
 }
 

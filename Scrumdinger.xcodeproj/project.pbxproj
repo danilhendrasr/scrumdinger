@@ -16,6 +16,8 @@
 		DDC5365F2CF71A4400D933A4 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536462CF6A19A00D933A4 /* DailyScrum.swift */; };
 		DDC536602CF71A4900D933A4 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536482CF6A19A00D933A4 /* History.swift */; };
 		DDC536612CF71A4E00D933A4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC5364C2CF6A19A00D933A4 /* Theme.swift */; };
+		DDC536632CF71B0000D933A4 /* MeetingActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536622CF71AF200D933A4 /* MeetingActivityAttributes.swift */; };
+		DDC536642CF71B0000D933A4 /* MeetingActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC536622CF71AF200D933A4 /* MeetingActivityAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		DDC536462CF6A19A00D933A4 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		DDC536482CF6A19A00D933A4 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DDC5364C2CF6A19A00D933A4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DDC536622CF71AF200D933A4 /* MeetingActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingActivityAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -186,6 +189,7 @@
 		DDC536442CF6A17100D933A4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DDC536622CF71AF200D933A4 /* MeetingActivityAttributes.swift */,
 				DDC536462CF6A19A00D933A4 /* DailyScrum.swift */,
 				DDC536482CF6A19A00D933A4 /* History.swift */,
 				DDC5364C2CF6A19A00D933A4 /* Theme.swift */,
@@ -373,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC536602CF71A4900D933A4 /* History.swift in Sources */,
+				DDC536632CF71B0000D933A4 /* MeetingActivityAttributes.swift in Sources */,
 				DDC5365F2CF71A4400D933A4 /* DailyScrum.swift in Sources */,
 				DDC536612CF71A4E00D933A4 /* Theme.swift in Sources */,
 			);
@@ -396,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC536642CF71B0000D933A4 /* MeetingActivityAttributes.swift in Sources */,
 				DDC536552CF6A19A00D933A4 /* DailyScrum.swift in Sources */,
 				DDC536562CF6A19A00D933A4 /* History.swift in Sources */,
 				DDC5365C2CF6A19A00D933A4 /* Theme.swift in Sources */,
@@ -559,6 +565,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -598,6 +606,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
