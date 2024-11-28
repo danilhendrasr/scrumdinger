@@ -2,6 +2,16 @@
 
 A simple iOS app for managing daily scrums and meetings, built as a learning project using SwiftUI.
 
+<img width="200" src="https://github.com/user-attachments/assets/623af2e8-e51d-4cdd-94f9-9747adf2ce1e" />
+<img width="200" src="https://github.com/user-attachments/assets/a8c3cb88-daba-43ee-bc49-e73f6d8566ae" />
+<img width="200" src="https://github.com/user-attachments/assets/ccc3c3fd-6f89-4648-aebd-221590637b29" />
+<img width="200" src="https://github.com/user-attachments/assets/638a2941-72d7-46a6-9165-a8b0e8466a71" />
+<img width="200" src="https://github.com/user-attachments/assets/dc2ca528-9f33-4fe2-aa99-a98d78e4ae3b" />
+<img width="200" src="https://github.com/user-attachments/assets/ed1ee5e5-e22e-4ce8-b88c-ec5b9592d834" />
+<img width="200" src="https://github.com/user-attachments/assets/958bb625-150e-426c-b03f-e04170280512" />
+<img width="200" src="https://github.com/user-attachments/assets/c3332c4a-e3f9-45de-ab25-5fdf245cdd82" />
+<img width="200" src="https://github.com/user-attachments/assets/a7dd8dfd-05d5-47d9-9dbf-68a8eb79a260" />
+
 ## Features
 
 ### Scrum Management
@@ -9,6 +19,7 @@ A simple iOS app for managing daily scrums and meetings, built as a learning pro
 - Create, edit, and delete scrums
 - Customize scrum details including title, duration, theme, and attendees
 - View list of all scrums with their essential information
+- Data persistence
 
 ### Meeting Features
 
@@ -52,10 +63,6 @@ This project was developed as a first iOS app to learn:
 1. Clone the repository
 2. Open the project in Xcode
 3. Build and run on simulator or physical device
-
-## Screenshots
-
-[Screenshots to be added]
 
 ## License
 
